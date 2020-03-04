@@ -17,3 +17,10 @@ def NumeroPersonajesEntre(datos,juego1,juego2):
     else:
         return True
 
+def ListarEstadios(datos,juego):
+    estadios=[]
+    for i in datos:
+        if i.get("name") == juego:
+            for o in i.get("stages"):
+                estadios.append(o.get("Name"))
+    return estadios
