@@ -26,10 +26,18 @@ def ListarEstadios(datos,juego):
     return estadios
 
 def BuscarPesonaje(datos,personaje):
-    juego=[]
+    juegos=[]
     for i in datos:
         for o in i.get("characters"):
             if personaje == o.get("Name"):
-                juego.append(i.get("name"))
-    return juego
+                juegos.append(i.get("name"))
+    return juegos
 
+def BuscarCoincidencia(datos,personaje,estadio):
+    juegos=[]
+    for i in datos:
+        for perso in i.get("characters"):
+            for estadio in i.get("stages"):
+                if perso.get("Name") == personaje and estadio.get("Name") == estadio:
+                    juegos.append(i.get("name"))
+    return juegos
