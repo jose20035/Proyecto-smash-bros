@@ -24,3 +24,12 @@ def ListarEstadios(datos,juego):
             for o in i.get("stages"):
                 estadios.append(o.get("Name"))
     return estadios
+
+def BuscarPesonaje(datos,personaje):
+    juego=[]
+    for i in datos:
+        for o in i.get("characters"):
+            if personaje == o.get("Name"):
+                juego.append(i.get("name"))
+    return juego
+
