@@ -24,7 +24,7 @@ while True:
         print()
         print("Los juegos registrados son:")
         for jue in ListarTodo(datos):
-            print("Nombre: %s Abreviación: %s Caratula: %s" % (jue.get("Juego"),jue.get("abreviacion"),jue.get("baner")))
+            print("Nombre: %s Abreviación: %s Caratula: %s" % (jue.get("Juego"),jue.get("Abreviacion"),jue.get("baner")))
         a=input("Pulsa enter para continuar.")
     elif opcion =="2":
         print()

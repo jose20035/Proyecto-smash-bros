@@ -1,6 +1,6 @@
 def ListarTodo(datos):
     respuesta=[]
-    for i in datos:
+    for i in datos.get("games"):
         respuesta.append({"Juego":i.get("name"),"Abreviacion":i.get("abbreviation"),"baner":i.get("BannerUrl")})
     return respuesta
 
