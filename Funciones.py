@@ -5,7 +5,7 @@ def ListarTodo(datos):
     return respuesta
 
 def NumeroPersonajesEntre(datos,juego1,juego2):
-    for i in datos:
+    for i in datos.get("games"):
         if i.get("name") == juego1:
             nºperjuego1=len(i.get("characters"))
         if i.get("name") == juego2:
@@ -19,7 +19,7 @@ def NumeroPersonajesEntre(datos,juego1,juego2):
 
 def ListarEstadios(datos,juego):
     estadios=[]
-    for i in datos:
+    for i in datos.get("games"):
         if i.get("name") == juego:
             for o in i.get("stages"):
                 estadios.append(o.get("Name"))
@@ -27,7 +27,7 @@ def ListarEstadios(datos,juego):
 
 def BuscarPesonaje(datos,personaje):
     juegos=[]
-    for i in datos:
+    for i in datos.get("games"):
         for o in i.get("characters"):
             if personaje == o.get("Name"):
                 juegos.append(i.get("name"))
@@ -35,7 +35,7 @@ def BuscarPesonaje(datos,personaje):
 
 def BuscarCoincidencia(datos,personaje,estadio):
     juegos=[]
-    for i in datos:
+    for i in datos.get("games"):
         for perso in i.get("characters"):
             for estadio in i.get("stages"):
                 if perso.get("Name") == personaje and estadio.get("Name") == estadio:

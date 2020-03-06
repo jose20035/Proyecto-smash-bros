@@ -28,37 +28,19 @@ while True:
         a=input("Pulsa enter para continuar.")
     elif opcion =="2":
         print()
-        print("El numero de actores que tienen las peliculas son:")
-        for peli in contar_actores(datos):
-            print("La pelicula %s tienen %s actores." % (peli.get("titulo"),peli.get("nºactores")))
+        print("Introduce dos juegos:")
+        jue1=input(":> ")
+        jue2=input(":> ")
+        if 
         a=input("Pulsa enter para continuar.")
-    elif opcion == "3":
-        print()
-        palabra1=input("Introduce una palabra que creas que este en la sinopsis:> ")
-        palabra2=input("Introduce otra palabra que creas que este en la sinopsis:> ")
-        print()
-        print("Los titulos en los que las palabras estan realcionados con la sinopsis son:")
-        for peli in buscar_sinopsis(datos,palabra1,palabra2):
-            print(peli)
+    '''elif opcion == "3":
+        
         a=input("Pulsa enter para continuar.")
     elif opcion == "4":
-        print()
-        actor=input("Introuce el actor del que quieras buscar sus pelicualas:> ")
-        print()
-        print("Las peliculas en las que aparece ese actor son:")
-        for peli in buscar_por_actor(datos,actor):
-            print(peli)
+        
         a=input("Pulsa enter para continuar.")
     elif opcion == "5":
-        cont=1
-        print()
-        fechaini=input("Introduce la fecha inicio con formato (YYYY-MM-DD):> ")
-        fechafin=input("Introduce la fecha fin con formato (YYYY-MM-DD):> ")
-        print()
-        print("Las tres pelias mejor valoradas de esa fecha son:")
-        for peli in buscar_por_fecha(datos,fechaini,fechafin):
-            print("#%i La peli %s con el poster:%s" % (cont,peli.get("titulo"),peli.get("poster")))
-            cont=cont+1
+        
         a=input("Pulsa enter para continuar.")
     elif opcion =="0":
-        break
+        break'''
