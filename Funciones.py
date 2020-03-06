@@ -11,11 +11,11 @@ def NumeroPersonajesEntre(datos,juego1,juego2):
         if i.get("name") == juego2:
             nºperjuego2=len(i.get("characters"))
     if nºperjuego1 > nºperjuego2:
-        return {"JuegoConMasPersonajes":juego1,"NºPersonajes":juego1-juego2}
+        return {"JuegoConMasPersonajes":juego1,"NºPersonajes":nºperjuego1-nºperjuego2}
     elif nºperjuego2 > nºperjuego1:
-        return {"JuegoConMasPersonajes":juego2,"NºPersonajes":juego2-juego1}
+        return {"JuegoConMasPersonajes":juego2,"NºPersonajes":nºperjuego2-nºperjuego1}
     else:
-        return True
+        return {"JuegoConMasPersonajes":' ',"NºPersonajes":0}
 
 def ListarEstadios(datos,juego):
     estadios=[]
